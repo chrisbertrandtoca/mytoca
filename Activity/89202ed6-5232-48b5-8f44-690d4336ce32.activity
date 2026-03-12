@@ -1,0 +1,1078 @@
+{
+  "metadata": {
+    "id": "89202ed6-5232-48b5-8f44-690d4336ce32",
+    "contentHash": "IFOYDi9Rj4bcX\u002BT5xj6Ny0HU25Tq/ubUWsJvEXrQgt0=",
+    "platformVersion": "10.0.0",
+    "revisionId": "66f766d0-2746-4a06-8b58-4e45f72f3770",
+    "updatedAt": "2026-03-12T14:17:29.9494982Z",
+    "updatedBy": "Toca.io",
+    "branch": "/app/data/git/08de2c26-4327-4f14-8977-0045ecb5b0d6/worktrees/dev"
+  },
+  "content": {
+    "id": "69a853c8985a489f0d7ddb23",
+    "projectId": "460b6e3a-be5c-4a0c-880b-b1af48451b23",
+    "description": "Utility - Clear Down Framework Data action",
+    "associatedUserId": "4eab5bd7-e0a8-483c-ae88-e13dd3dc92aa",
+    "botIds": [],
+    "version": 1,
+    "actions": [
+      {
+        "name": "Get Table Data",
+        "type": "GetTableData",
+        "version": "4.2.1",
+        "actionId": "c32622a0-ea09-44c9-b2cd-5cd9eb80f842",
+        "actionDefinitionActionId": "09699b38-188e-4041-91b1-66f5913db388",
+        "parameters": [
+          {
+            "key": "table",
+            "type": "TableV3",
+            "value": "\u0022\u00A3\u00A3!402aef30-4f8a-4b65-94c5-635f39ec556e:framework\u00A3\u00A3\u0022"
+          },
+          {
+            "key": "includeRowCount",
+            "type": "Boolean",
+            "value": "true"
+          },
+          {
+            "key": "queryString",
+            "type": "Query",
+            "value": "[{\u0022field\u0022:\u0022id\u0022,\u0022operator\u0022:\u0022=\u0022,\u0022value\u0022:\u0022$$frameworkUid$$\u0022,\u0022caseSensitive\u0022:false}]"
+          },
+          {
+            "key": "selectedColumns",
+            "type": "Array",
+            "value": "[]"
+          },
+          {
+            "key": "returnWithoutData",
+            "type": "Boolean",
+            "value": "false"
+          },
+          {
+            "key": "timeout",
+            "type": "Number",
+            "value": "30000"
+          },
+          {
+            "key": "errorOnTimeout",
+            "type": "Boolean",
+            "value": "true"
+          },
+          {
+            "key": "failOnError",
+            "type": "Boolean",
+            "value": "true"
+          },
+          {
+            "key": "redacted",
+            "type": "Boolean",
+            "value": "false"
+          }
+        ],
+        "actions": [],
+        "context": [],
+        "tables": [],
+        "lists": [],
+        "variableMappings": [],
+        "variables": [],
+        "results": [],
+        "logs": [],
+        "datastoreReferences": [
+          {
+            "datastoreId": "402aef30-4f8a-4b65-94c5-635f39ec556e",
+            "variableName": "framework"
+          }
+        ]
+      },
+      {
+        "name": "Set Variable - carbonCalcName",
+        "type": "VariableSetV2",
+        "version": "1.1.2",
+        "actionId": "9c90072e-5ac2-4145-b253-a6b820180cef",
+        "actionDefinitionActionId": "32b3480c-118e-42ce-99dd-1c25aa93d742",
+        "parameters": [
+          {
+            "key": "variable",
+            "type": "String",
+            "value": "\u0022carbonCalcName\u0022"
+          },
+          {
+            "key": "variableType",
+            "type": "String",
+            "value": "\u0022String\u0022"
+          },
+          {
+            "key": "data",
+            "type": "String",
+            "value": "\u0022$$c32622a0-ea09-44c9-b2cd-5cd9eb80f842:result{$.values[0].recordValue.carbon_calculations_name}$$\u0022"
+          },
+          {
+            "key": "failOnError",
+            "type": "Boolean",
+            "value": "true"
+          },
+          {
+            "key": "redacted",
+            "type": "Boolean",
+            "value": "false"
+          }
+        ],
+        "actions": [],
+        "context": [],
+        "tables": [],
+        "lists": [],
+        "variableMappings": [
+          {
+            "actionId": "9c90072e-5ac2-4145-b253-a6b820180cef",
+            "actionResult": "9c90072e-5ac2-4145-b253-a6b820180cef:carbonCalcName",
+            "variableName": "carbonCalcName",
+            "type": "String"
+          }
+        ],
+        "variables": [],
+        "results": [],
+        "logs": [],
+        "datastoreReferences": []
+      },
+      {
+        "name": "Delete \u0022comments\u0022 Table Row(s)",
+        "type": "DeleteRows",
+        "version": "3.0.5",
+        "actionId": "3a9f2aa2-3250-4b9b-8eba-4e6b9d5c52d9",
+        "actionDefinitionActionId": "204d9175-1fa2-4675-835d-6b5cc0950509",
+        "parameters": [
+          {
+            "key": "table",
+            "type": "TableV3",
+            "value": "\u0022\u00A3\u00A3!402aef30-4f8a-4b65-94c5-635f39ec556e:comments\u00A3\u00A3\u0022"
+          },
+          {
+            "key": "queryString",
+            "type": "Query",
+            "value": "[{\u0022field\u0022:\u0022answers.assessment.framework_id\u0022,\u0022operator\u0022:\u0022=\u0022,\u0022value\u0022:\u0022$$frameworkUid$$\u0022,\u0022caseSensitive\u0022:false}]"
+          },
+          {
+            "key": "timeout",
+            "type": "Number",
+            "value": "30000"
+          },
+          {
+            "key": "errorOnTimeout",
+            "type": "Boolean",
+            "value": "true"
+          },
+          {
+            "key": "failOnError",
+            "type": "Boolean",
+            "value": "true"
+          },
+          {
+            "key": "redacted",
+            "type": "Boolean",
+            "value": "false"
+          }
+        ],
+        "actions": [],
+        "context": [],
+        "tables": [],
+        "lists": [],
+        "variableMappings": [],
+        "variables": [],
+        "results": [],
+        "logs": [],
+        "datastoreReferences": [
+          {
+            "datastoreId": "402aef30-4f8a-4b65-94c5-635f39ec556e",
+            "variableName": "comments"
+          }
+        ]
+      },
+      {
+        "name": "Delete \u0022ai_responses\u0022 Table Row(s)",
+        "type": "DeleteRows",
+        "version": "3.0.5",
+        "actionId": "08e920c5-a883-4bee-9503-35ecb9313360",
+        "actionDefinitionActionId": "204d9175-1fa2-4675-835d-6b5cc0950509",
+        "parameters": [
+          {
+            "key": "table",
+            "type": "TableV3",
+            "value": "\u0022\u00A3\u00A3!402aef30-4f8a-4b65-94c5-635f39ec556e:ai_responses\u00A3\u00A3\u0022"
+          },
+          {
+            "key": "queryString",
+            "type": "Query",
+            "value": "[{\u0022field\u0022:\u0022answers.assessment.framework_id\u0022,\u0022operator\u0022:\u0022=\u0022,\u0022value\u0022:\u0022$$frameworkUid$$\u0022,\u0022caseSensitive\u0022:false}]"
+          },
+          {
+            "key": "timeout",
+            "type": "Number",
+            "value": "30000"
+          },
+          {
+            "key": "errorOnTimeout",
+            "type": "Boolean",
+            "value": "true"
+          },
+          {
+            "key": "failOnError",
+            "type": "Boolean",
+            "value": "true"
+          },
+          {
+            "key": "redacted",
+            "type": "Boolean",
+            "value": "false"
+          }
+        ],
+        "actions": [],
+        "context": [],
+        "tables": [],
+        "lists": [],
+        "variableMappings": [],
+        "variables": [],
+        "results": [],
+        "logs": [],
+        "datastoreReferences": [
+          {
+            "datastoreId": "402aef30-4f8a-4b65-94c5-635f39ec556e",
+            "variableName": "ai_responses"
+          }
+        ]
+      },
+      {
+        "name": "Delete \u0022answers\u0022 Table Row(s)",
+        "type": "DeleteRows",
+        "version": "3.0.5",
+        "actionId": "dc7a5ade-7c3a-4674-8ed6-22d2481a3346",
+        "actionDefinitionActionId": "204d9175-1fa2-4675-835d-6b5cc0950509",
+        "parameters": [
+          {
+            "key": "table",
+            "type": "TableV3",
+            "value": "\u0022\u00A3\u00A3!402aef30-4f8a-4b65-94c5-635f39ec556e:answers\u00A3\u00A3\u0022"
+          },
+          {
+            "key": "queryString",
+            "type": "Query",
+            "value": "[{\u0022field\u0022:\u0022assessment.framework_id\u0022,\u0022operator\u0022:\u0022=\u0022,\u0022value\u0022:\u0022$$frameworkUid$$\u0022,\u0022caseSensitive\u0022:false}]"
+          },
+          {
+            "key": "timeout",
+            "type": "Number",
+            "value": "30000"
+          },
+          {
+            "key": "errorOnTimeout",
+            "type": "Boolean",
+            "value": "true"
+          },
+          {
+            "key": "failOnError",
+            "type": "Boolean",
+            "value": "true"
+          },
+          {
+            "key": "redacted",
+            "type": "Boolean",
+            "value": "false"
+          }
+        ],
+        "actions": [],
+        "context": [],
+        "tables": [],
+        "lists": [],
+        "variableMappings": [],
+        "variables": [],
+        "results": [],
+        "logs": [],
+        "datastoreReferences": [
+          {
+            "datastoreId": "402aef30-4f8a-4b65-94c5-635f39ec556e",
+            "variableName": "answers"
+          }
+        ]
+      },
+      {
+        "name": "Delete \u0022question\u0022 Table Row(s)",
+        "type": "DeleteRows",
+        "version": "3.0.5",
+        "actionId": "3b42b598-33d6-4f69-85ee-6e1e51f18c78",
+        "actionDefinitionActionId": "204d9175-1fa2-4675-835d-6b5cc0950509",
+        "parameters": [
+          {
+            "key": "table",
+            "type": "TableV3",
+            "value": "\u0022\u00A3\u00A3!402aef30-4f8a-4b65-94c5-635f39ec556e:question\u00A3\u00A3\u0022"
+          },
+          {
+            "key": "queryString",
+            "type": "Query",
+            "value": "[{\u0022field\u0022:\u0022sub_section.section.framework.id\u0022,\u0022operator\u0022:\u0022=\u0022,\u0022value\u0022:\u0022$$frameworkUid$$\u0022,\u0022caseSensitive\u0022:false}]"
+          },
+          {
+            "key": "timeout",
+            "type": "Number",
+            "value": "30000"
+          },
+          {
+            "key": "errorOnTimeout",
+            "type": "Boolean",
+            "value": "true"
+          },
+          {
+            "key": "failOnError",
+            "type": "Boolean",
+            "value": "true"
+          },
+          {
+            "key": "redacted",
+            "type": "Boolean",
+            "value": "false"
+          }
+        ],
+        "actions": [],
+        "context": [],
+        "tables": [],
+        "lists": [],
+        "variableMappings": [],
+        "variables": [],
+        "results": [],
+        "logs": [],
+        "datastoreReferences": [
+          {
+            "datastoreId": "402aef30-4f8a-4b65-94c5-635f39ec556e",
+            "variableName": "question"
+          }
+        ]
+      },
+      {
+        "name": "Delete \u0022carbon_calc_baseline_questions\u0022 Table Row(s)",
+        "type": "DeleteRows",
+        "version": "3.0.5",
+        "actionId": "80dbc8bb-9be8-44cf-92f4-1d96604563db",
+        "actionDefinitionActionId": "204d9175-1fa2-4675-835d-6b5cc0950509",
+        "parameters": [
+          {
+            "key": "table",
+            "type": "TableV3",
+            "value": "\u0022\u00A3\u00A3!402aef30-4f8a-4b65-94c5-635f39ec556e:carbon_calc_baseline_questions\u00A3\u00A3\u0022"
+          },
+          {
+            "key": "queryString",
+            "type": "Query",
+            "value": "[{\u0022field\u0022:\u0022carbon_calculations_name\u0022,\u0022operator\u0022:\u0022=\u0022,\u0022value\u0022:\u0022$$carbonCalcName$$\u0022,\u0022caseSensitive\u0022:false}]"
+          },
+          {
+            "key": "timeout",
+            "type": "Number",
+            "value": "30000"
+          },
+          {
+            "key": "errorOnTimeout",
+            "type": "Boolean",
+            "value": "true"
+          },
+          {
+            "key": "failOnError",
+            "type": "Boolean",
+            "value": "true"
+          },
+          {
+            "key": "redacted",
+            "type": "Boolean",
+            "value": "false"
+          }
+        ],
+        "actions": [],
+        "context": [],
+        "tables": [],
+        "lists": [],
+        "variableMappings": [],
+        "variables": [],
+        "results": [],
+        "logs": [],
+        "datastoreReferences": [
+          {
+            "datastoreId": "402aef30-4f8a-4b65-94c5-635f39ec556e",
+            "variableName": "carbon_calc_baseline_questions"
+          }
+        ]
+      },
+      {
+        "name": "Delete \u0022carbon_calc_data_water_supply\u0022 Table Row(s)",
+        "type": "DeleteRows",
+        "version": "3.0.5",
+        "actionId": "db2aefbb-32b5-439f-a267-2ac3b978982d",
+        "actionDefinitionActionId": "204d9175-1fa2-4675-835d-6b5cc0950509",
+        "parameters": [
+          {
+            "key": "table",
+            "type": "TableV3",
+            "value": "\u0022\u00A3\u00A3!402aef30-4f8a-4b65-94c5-635f39ec556e:carbon_calc_data_water_supply\u00A3\u00A3\u0022"
+          },
+          {
+            "key": "queryString",
+            "type": "Query",
+            "value": "[{\u0022field\u0022:\u0022carbon_calculations_name\u0022,\u0022operator\u0022:\u0022=\u0022,\u0022value\u0022:\u0022$$carbonCalcName$$\u0022,\u0022caseSensitive\u0022:false}]"
+          },
+          {
+            "key": "timeout",
+            "type": "Number",
+            "value": "30000"
+          },
+          {
+            "key": "errorOnTimeout",
+            "type": "Boolean",
+            "value": "true"
+          },
+          {
+            "key": "failOnError",
+            "type": "Boolean",
+            "value": "true"
+          },
+          {
+            "key": "redacted",
+            "type": "Boolean",
+            "value": "false"
+          }
+        ],
+        "actions": [],
+        "context": [],
+        "tables": [],
+        "lists": [],
+        "variableMappings": [],
+        "variables": [],
+        "results": [],
+        "logs": [],
+        "datastoreReferences": [
+          {
+            "datastoreId": "402aef30-4f8a-4b65-94c5-635f39ec556e",
+            "variableName": "carbon_calc_data_water_supply"
+          }
+        ]
+      },
+      {
+        "name": "Delete \u0022carbon_calc_data_water_treatment\u0022 Table Row(s)",
+        "type": "DeleteRows",
+        "version": "3.0.5",
+        "actionId": "7c9f1d7f-2be1-4be3-accf-a7939cf1bb49",
+        "actionDefinitionActionId": "204d9175-1fa2-4675-835d-6b5cc0950509",
+        "parameters": [
+          {
+            "key": "table",
+            "type": "TableV3",
+            "value": "\u0022\u00A3\u00A3!402aef30-4f8a-4b65-94c5-635f39ec556e:carbon_calc_data_water_treatment\u00A3\u00A3\u0022"
+          },
+          {
+            "key": "queryString",
+            "type": "Query",
+            "value": "[{\u0022field\u0022:\u0022carbon_calculations_name\u0022,\u0022operator\u0022:\u0022=\u0022,\u0022value\u0022:\u0022$$carbonCalcName$$\u0022,\u0022caseSensitive\u0022:false}]"
+          },
+          {
+            "key": "timeout",
+            "type": "Number",
+            "value": "30000"
+          },
+          {
+            "key": "errorOnTimeout",
+            "type": "Boolean",
+            "value": "true"
+          },
+          {
+            "key": "failOnError",
+            "type": "Boolean",
+            "value": "true"
+          },
+          {
+            "key": "redacted",
+            "type": "Boolean",
+            "value": "false"
+          }
+        ],
+        "actions": [],
+        "context": [],
+        "tables": [],
+        "lists": [],
+        "variableMappings": [],
+        "variables": [],
+        "results": [],
+        "logs": [],
+        "datastoreReferences": [
+          {
+            "datastoreId": "402aef30-4f8a-4b65-94c5-635f39ec556e",
+            "variableName": "carbon_calc_data_water_treatment"
+          }
+        ]
+      },
+      {
+        "name": "Delete \u0022carbon_calc_data_hotel_stays\u0022 Table Row(s)",
+        "type": "DeleteRows",
+        "version": "3.0.5",
+        "actionId": "408b718c-1527-4898-b549-b0d9f7a41400",
+        "actionDefinitionActionId": "204d9175-1fa2-4675-835d-6b5cc0950509",
+        "parameters": [
+          {
+            "key": "table",
+            "type": "TableV3",
+            "value": "\u0022\u00A3\u00A3!402aef30-4f8a-4b65-94c5-635f39ec556e:carbon_calc_data_hotel_stays\u00A3\u00A3\u0022"
+          },
+          {
+            "key": "queryString",
+            "type": "Query",
+            "value": "[{\u0022field\u0022:\u0022carbon_calculations_name\u0022,\u0022operator\u0022:\u0022=\u0022,\u0022value\u0022:\u0022$$carbonCalcName$$\u0022,\u0022caseSensitive\u0022:false}]"
+          },
+          {
+            "key": "timeout",
+            "type": "Number",
+            "value": "30000"
+          },
+          {
+            "key": "errorOnTimeout",
+            "type": "Boolean",
+            "value": "true"
+          },
+          {
+            "key": "failOnError",
+            "type": "Boolean",
+            "value": "true"
+          },
+          {
+            "key": "redacted",
+            "type": "Boolean",
+            "value": "false"
+          }
+        ],
+        "actions": [],
+        "context": [],
+        "tables": [],
+        "lists": [],
+        "variableMappings": [],
+        "variables": [],
+        "results": [],
+        "logs": [],
+        "datastoreReferences": [
+          {
+            "datastoreId": "402aef30-4f8a-4b65-94c5-635f39ec556e",
+            "variableName": "carbon_calc_data_hotel_stays"
+          }
+        ]
+      },
+      {
+        "name": "Delete \u0022carbon_calc_data_electricity\u0022 Table Row(s)",
+        "type": "DeleteRows",
+        "version": "3.0.5",
+        "actionId": "1e9e3df1-fe67-4d2c-aac0-b3c001b36a76",
+        "actionDefinitionActionId": "204d9175-1fa2-4675-835d-6b5cc0950509",
+        "parameters": [
+          {
+            "key": "table",
+            "type": "TableV3",
+            "value": "\u0022\u00A3\u00A3!402aef30-4f8a-4b65-94c5-635f39ec556e:carbon_calc_data_electricity\u00A3\u00A3\u0022"
+          },
+          {
+            "key": "queryString",
+            "type": "Query",
+            "value": "[{\u0022field\u0022:\u0022carbon_calculations_name\u0022,\u0022operator\u0022:\u0022=\u0022,\u0022value\u0022:\u0022$$carbonCalcName$$\u0022,\u0022caseSensitive\u0022:false}]"
+          },
+          {
+            "key": "timeout",
+            "type": "Number",
+            "value": "30000"
+          },
+          {
+            "key": "errorOnTimeout",
+            "type": "Boolean",
+            "value": "true"
+          },
+          {
+            "key": "failOnError",
+            "type": "Boolean",
+            "value": "true"
+          },
+          {
+            "key": "redacted",
+            "type": "Boolean",
+            "value": "false"
+          }
+        ],
+        "actions": [],
+        "context": [],
+        "tables": [],
+        "lists": [],
+        "variableMappings": [],
+        "variables": [],
+        "results": [],
+        "logs": [],
+        "datastoreReferences": [
+          {
+            "datastoreId": "402aef30-4f8a-4b65-94c5-635f39ec556e",
+            "variableName": "carbon_calc_data_electricity"
+          }
+        ]
+      },
+      {
+        "name": "Delete \u0022carbon_calc_data_waste_landfill\u0022 Table Row(s)",
+        "type": "DeleteRows",
+        "version": "3.0.5",
+        "actionId": "c5d963a9-1f1f-43cd-b104-cb420e9294b0",
+        "actionDefinitionActionId": "204d9175-1fa2-4675-835d-6b5cc0950509",
+        "parameters": [
+          {
+            "key": "table",
+            "type": "TableV3",
+            "value": "\u0022\u00A3\u00A3!402aef30-4f8a-4b65-94c5-635f39ec556e:carbon_calc_data_waste_landfill\u00A3\u00A3\u0022"
+          },
+          {
+            "key": "queryString",
+            "type": "Query",
+            "value": "[{\u0022field\u0022:\u0022carbon_calculations_name\u0022,\u0022operator\u0022:\u0022=\u0022,\u0022value\u0022:\u0022$$carbonCalcName$$\u0022,\u0022caseSensitive\u0022:false}]"
+          },
+          {
+            "key": "timeout",
+            "type": "Number",
+            "value": "30000"
+          },
+          {
+            "key": "errorOnTimeout",
+            "type": "Boolean",
+            "value": "true"
+          },
+          {
+            "key": "failOnError",
+            "type": "Boolean",
+            "value": "true"
+          },
+          {
+            "key": "redacted",
+            "type": "Boolean",
+            "value": "false"
+          }
+        ],
+        "actions": [],
+        "context": [],
+        "tables": [],
+        "lists": [],
+        "variableMappings": [],
+        "variables": [],
+        "results": [],
+        "logs": [],
+        "datastoreReferences": [
+          {
+            "datastoreId": "402aef30-4f8a-4b65-94c5-635f39ec556e",
+            "variableName": "carbon_calc_data_waste_landfill"
+          }
+        ]
+      },
+      {
+        "name": "Delete \u0022assessment-to-section\u0022 Table Row(s)",
+        "type": "DeleteRows",
+        "version": "3.0.5",
+        "actionId": "5896d917-1302-48c9-8860-ff0396670a64",
+        "actionDefinitionActionId": "204d9175-1fa2-4675-835d-6b5cc0950509",
+        "parameters": [
+          {
+            "key": "table",
+            "type": "TableV3",
+            "value": "\u0022\u00A3\u00A3!402aef30-4f8a-4b65-94c5-635f39ec556e:assessment-to-section\u00A3\u00A3\u0022"
+          },
+          {
+            "key": "queryString",
+            "type": "Query",
+            "value": "[{\u0022field\u0022:\u0022assessment.framework_id\u0022,\u0022operator\u0022:\u0022=\u0022,\u0022value\u0022:\u0022$$frameworkUid$$\u0022,\u0022caseSensitive\u0022:false}]"
+          },
+          {
+            "key": "timeout",
+            "type": "Number",
+            "value": "30000"
+          },
+          {
+            "key": "errorOnTimeout",
+            "type": "Boolean",
+            "value": "true"
+          },
+          {
+            "key": "failOnError",
+            "type": "Boolean",
+            "value": "true"
+          },
+          {
+            "key": "redacted",
+            "type": "Boolean",
+            "value": "false"
+          }
+        ],
+        "actions": [],
+        "context": [],
+        "tables": [],
+        "lists": [],
+        "variableMappings": [],
+        "variables": [],
+        "results": [],
+        "logs": [],
+        "datastoreReferences": [
+          {
+            "datastoreId": "402aef30-4f8a-4b65-94c5-635f39ec556e",
+            "variableName": "assessment-to-section"
+          }
+        ]
+      },
+      {
+        "name": "Delete \u0022sub_section_assignee\u0022 Table Row(s)",
+        "type": "DeleteRows",
+        "version": "3.0.5",
+        "actionId": "23f4209b-1e35-4028-af9f-20077a240173",
+        "actionDefinitionActionId": "204d9175-1fa2-4675-835d-6b5cc0950509",
+        "parameters": [
+          {
+            "key": "table",
+            "type": "TableV3",
+            "value": "\u0022\u00A3\u00A3!402aef30-4f8a-4b65-94c5-635f39ec556e:sub_section_assignee\u00A3\u00A3\u0022"
+          },
+          {
+            "key": "queryString",
+            "type": "Query",
+            "value": "[{\u0022field\u0022:\u0022assessment.framework_id\u0022,\u0022operator\u0022:\u0022=\u0022,\u0022value\u0022:\u0022$$frameworkUid$$\u0022,\u0022caseSensitive\u0022:false}]"
+          },
+          {
+            "key": "timeout",
+            "type": "Number",
+            "value": "30000"
+          },
+          {
+            "key": "errorOnTimeout",
+            "type": "Boolean",
+            "value": "true"
+          },
+          {
+            "key": "failOnError",
+            "type": "Boolean",
+            "value": "true"
+          },
+          {
+            "key": "redacted",
+            "type": "Boolean",
+            "value": "false"
+          }
+        ],
+        "actions": [],
+        "context": [],
+        "tables": [],
+        "lists": [],
+        "variableMappings": [],
+        "variables": [],
+        "results": [],
+        "logs": [],
+        "datastoreReferences": [
+          {
+            "datastoreId": "402aef30-4f8a-4b65-94c5-635f39ec556e",
+            "variableName": "sub_section_assignee"
+          }
+        ]
+      },
+      {
+        "name": "Delete \u0022sub_section_progress\u0022 Table Row(s)",
+        "type": "DeleteRows",
+        "version": "3.0.5",
+        "actionId": "3757ec3d-0c03-4c31-a248-f9639d837cde",
+        "actionDefinitionActionId": "204d9175-1fa2-4675-835d-6b5cc0950509",
+        "parameters": [
+          {
+            "key": "table",
+            "type": "TableV3",
+            "value": "\u0022\u00A3\u00A3!402aef30-4f8a-4b65-94c5-635f39ec556e:sub_section_progress\u00A3\u00A3\u0022"
+          },
+          {
+            "key": "queryString",
+            "type": "Query",
+            "value": "[{\u0022field\u0022:\u0022assessment.framework_id\u0022,\u0022operator\u0022:\u0022=\u0022,\u0022value\u0022:\u0022$$frameworkUid$$\u0022,\u0022caseSensitive\u0022:false}]"
+          },
+          {
+            "key": "timeout",
+            "type": "Number",
+            "value": "30000"
+          },
+          {
+            "key": "errorOnTimeout",
+            "type": "Boolean",
+            "value": "true"
+          },
+          {
+            "key": "failOnError",
+            "type": "Boolean",
+            "value": "true"
+          },
+          {
+            "key": "redacted",
+            "type": "Boolean",
+            "value": "false"
+          }
+        ],
+        "actions": [],
+        "context": [],
+        "tables": [],
+        "lists": [],
+        "variableMappings": [],
+        "variables": [],
+        "results": [],
+        "logs": [],
+        "datastoreReferences": [
+          {
+            "datastoreId": "402aef30-4f8a-4b65-94c5-635f39ec556e",
+            "variableName": "sub_section_progress"
+          }
+        ]
+      },
+      {
+        "name": "Delete \u0022sub_section\u0022 Table Row(s)",
+        "type": "DeleteRows",
+        "version": "3.0.5",
+        "actionId": "c404cf34-7413-4f6b-89fc-ec0af6349c7c",
+        "actionDefinitionActionId": "204d9175-1fa2-4675-835d-6b5cc0950509",
+        "parameters": [
+          {
+            "key": "table",
+            "type": "TableV3",
+            "value": "\u0022\u00A3\u00A3!402aef30-4f8a-4b65-94c5-635f39ec556e:sub_section\u00A3\u00A3\u0022"
+          },
+          {
+            "key": "queryString",
+            "type": "Query",
+            "value": "[{\u0022field\u0022:\u0022section.framework.id\u0022,\u0022operator\u0022:\u0022=\u0022,\u0022value\u0022:\u0022$$frameworkUid$$\u0022,\u0022caseSensitive\u0022:false}]"
+          },
+          {
+            "key": "timeout",
+            "type": "Number",
+            "value": "30000"
+          },
+          {
+            "key": "errorOnTimeout",
+            "type": "Boolean",
+            "value": "true"
+          },
+          {
+            "key": "failOnError",
+            "type": "Boolean",
+            "value": "true"
+          },
+          {
+            "key": "redacted",
+            "type": "Boolean",
+            "value": "false"
+          }
+        ],
+        "actions": [],
+        "context": [],
+        "tables": [],
+        "lists": [],
+        "variableMappings": [],
+        "variables": [],
+        "results": [],
+        "logs": [],
+        "datastoreReferences": [
+          {
+            "datastoreId": "402aef30-4f8a-4b65-94c5-635f39ec556e",
+            "variableName": "sub_section"
+          }
+        ]
+      },
+      {
+        "name": "Delete \u0022section\u0022 Table Row(s)",
+        "type": "DeleteRows",
+        "version": "3.0.5",
+        "actionId": "45a3a327-abb9-4b80-8b80-bca718e7dc78",
+        "actionDefinitionActionId": "204d9175-1fa2-4675-835d-6b5cc0950509",
+        "parameters": [
+          {
+            "key": "table",
+            "type": "TableV3",
+            "value": "\u0022\u00A3\u00A3!402aef30-4f8a-4b65-94c5-635f39ec556e:section\u00A3\u00A3\u0022"
+          },
+          {
+            "key": "queryString",
+            "type": "Query",
+            "value": "[{\u0022field\u0022:\u0022framework.id\u0022,\u0022operator\u0022:\u0022=\u0022,\u0022value\u0022:\u0022$$frameworkUid$$\u0022,\u0022caseSensitive\u0022:false}]"
+          },
+          {
+            "key": "timeout",
+            "type": "Number",
+            "value": "30000"
+          },
+          {
+            "key": "errorOnTimeout",
+            "type": "Boolean",
+            "value": "true"
+          },
+          {
+            "key": "failOnError",
+            "type": "Boolean",
+            "value": "true"
+          },
+          {
+            "key": "redacted",
+            "type": "Boolean",
+            "value": "false"
+          }
+        ],
+        "actions": [],
+        "context": [],
+        "tables": [],
+        "lists": [],
+        "variableMappings": [],
+        "variables": [],
+        "results": [],
+        "logs": [],
+        "datastoreReferences": [
+          {
+            "datastoreId": "402aef30-4f8a-4b65-94c5-635f39ec556e",
+            "variableName": "section"
+          }
+        ]
+      },
+      {
+        "name": "Delete \u0022assessment\u0022 Table Row(s)",
+        "type": "DeleteRows",
+        "version": "3.0.5",
+        "actionId": "e4107043-adda-4da0-bf1a-69dd144c8164",
+        "actionDefinitionActionId": "204d9175-1fa2-4675-835d-6b5cc0950509",
+        "parameters": [
+          {
+            "key": "table",
+            "type": "TableV3",
+            "value": "\u0022\u00A3\u00A3!402aef30-4f8a-4b65-94c5-635f39ec556e:assessment\u00A3\u00A3\u0022"
+          },
+          {
+            "key": "queryString",
+            "type": "Query",
+            "value": "[{\u0022field\u0022:\u0022framework_id\u0022,\u0022operator\u0022:\u0022=\u0022,\u0022value\u0022:\u0022$$frameworkUid$$\u0022,\u0022caseSensitive\u0022:false}]"
+          },
+          {
+            "key": "timeout",
+            "type": "Number",
+            "value": "30000"
+          },
+          {
+            "key": "errorOnTimeout",
+            "type": "Boolean",
+            "value": "true"
+          },
+          {
+            "key": "failOnError",
+            "type": "Boolean",
+            "value": "true"
+          },
+          {
+            "key": "redacted",
+            "type": "Boolean",
+            "value": "false"
+          }
+        ],
+        "actions": [],
+        "context": [],
+        "tables": [],
+        "lists": [],
+        "variableMappings": [],
+        "variables": [],
+        "results": [],
+        "logs": [],
+        "datastoreReferences": [
+          {
+            "datastoreId": "402aef30-4f8a-4b65-94c5-635f39ec556e",
+            "variableName": "assessment"
+          }
+        ]
+      },
+      {
+        "name": "Delete \u0022framework\u0022 Table Row(s)",
+        "type": "DeleteRows",
+        "version": "3.0.5",
+        "actionId": "79f066f2-40f9-4031-a8a4-8d17bc3545d5",
+        "actionDefinitionActionId": "204d9175-1fa2-4675-835d-6b5cc0950509",
+        "parameters": [
+          {
+            "key": "table",
+            "type": "TableV3",
+            "value": "\u0022\u00A3\u00A3!402aef30-4f8a-4b65-94c5-635f39ec556e:framework\u00A3\u00A3\u0022"
+          },
+          {
+            "key": "queryString",
+            "type": "Query",
+            "value": "[{\u0022field\u0022:\u0022id\u0022,\u0022operator\u0022:\u0022=\u0022,\u0022value\u0022:\u0022$$frameworkUid$$\u0022,\u0022caseSensitive\u0022:false}]"
+          },
+          {
+            "key": "timeout",
+            "type": "Number",
+            "value": "30000"
+          },
+          {
+            "key": "errorOnTimeout",
+            "type": "Boolean",
+            "value": "true"
+          },
+          {
+            "key": "failOnError",
+            "type": "Boolean",
+            "value": "true"
+          },
+          {
+            "key": "redacted",
+            "type": "Boolean",
+            "value": "false"
+          }
+        ],
+        "actions": [],
+        "context": [],
+        "tables": [],
+        "lists": [],
+        "variableMappings": [],
+        "variables": [],
+        "results": [],
+        "logs": [],
+        "datastoreReferences": [
+          {
+            "datastoreId": "402aef30-4f8a-4b65-94c5-635f39ec556e",
+            "variableName": "framework"
+          }
+        ]
+      }
+    ],
+    "variableMappings": [
+      {
+        "actionResult": "frameworkUid",
+        "variableName": "frameworkUid",
+        "type": "string"
+      },
+      {
+        "actionId": "9c90072e-5ac2-4145-b253-a6b820180cef",
+        "actionResult": "9c90072e-5ac2-4145-b253-a6b820180cef:carbonCalcName",
+        "variableName": "carbonCalcName",
+        "type": "String"
+      }
+    ],
+    "outputMappings": [],
+    "metaData": [
+      {
+        "key": "inputs",
+        "type": "Array\u003CParameter\u003E",
+        "value": "[{\u0022type\u0022:\u0022string\u0022,\u0022key\u0022:\u0022frameworkUid\u0022,\u0022value\u0022:\u00224e963067-dda5-4f21-a49d-5245692eda66\u0022}]"
+      }
+    ],
+    "created": "2025-03-27T13:18:54+00:00",
+    "createdBy": "976f907b-c129-44c4-a9c2-cdc5fc218ce1",
+    "updated": "2026-03-12T14:17:29.5279127Z",
+    "updatedBy": "3b476bf3-0f2b-43c0-b7f2-4b8c7c8b2612",
+    "activityServiceType": "Stateless",
+    "datastoreReferences": [
+      {
+        "datastoreId": "402aef30-4f8a-4b65-94c5-635f39ec556e",
+        "variableName": "framework"
+      }
+    ],
+    "revisionId": "66f766d0-2746-4a06-8b58-4e45f72f3770",
+    "userId": "3b476bf3-0f2b-43c0-b7f2-4b8c7c8b2612",
+    "workspaceId": "08de2c26-4327-4f14-8977-0045ecb5b0d6",
+    "branch": "dev",
+    "resourceId": "89202ed6-5232-48b5-8f44-690d4336ce32",
+    "name": "Utility - Clear Down Framework Data "
+  }
+}
