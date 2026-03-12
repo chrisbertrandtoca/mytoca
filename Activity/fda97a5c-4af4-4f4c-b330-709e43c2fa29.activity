@@ -1,0 +1,83 @@
+{
+  "metadata": {
+    "id": "fda97a5c-4af4-4f4c-b330-709e43c2fa29",
+    "contentHash": "W/\u002BQoy080mCekFRSUQjPYGAMm5WnR3myhBL7zrvgxk8=",
+    "platformVersion": "10.0.0",
+    "revisionId": "79663e79-0ffe-46d9-b450-bb88ff93cb3c",
+    "updatedAt": "2026-03-12T12:04:53.3101409Z",
+    "updatedBy": "Toca.io",
+    "branch": "/app/data/git/2bbaecff-d8b0-4747-a91f-f2fd3aecde68"
+  },
+  "content": {
+    "id": "69b2abcf4a547f51e55f025c",
+    "projectId": "f021c210-b4e6-4dbe-8a3b-2e87e24c580f",
+    "description": "aSD",
+    "associatedUserId": "3b476bf3-0f2b-43c0-b7f2-4b8c7c8b2612",
+    "botIds": [],
+    "version": 1,
+    "actions": [
+      {
+        "name": "C#",
+        "type": "ExecuteCSharp",
+        "version": "1.0.5",
+        "actionId": "13c0e908-7453-4d82-bdd9-16bcd3653310",
+        "actionDefinitionActionId": "89d89be6-4d2c-44e0-8f63-e4ea5b53e3bf",
+        "parameters": [
+          {
+            "key": "command-chip",
+            "type": "Boolean",
+            "value": "false"
+          },
+          {
+            "key": "command",
+            "type": "String",
+            "value": "\u0022// IMA COMMANDER\u0022"
+          },
+          {
+            "key": "timeout",
+            "type": "Number",
+            "value": "30000"
+          },
+          {
+            "key": "errorOnTimeout",
+            "type": "Boolean",
+            "value": "true"
+          },
+          {
+            "key": "failOnError",
+            "type": "Boolean",
+            "value": "true"
+          },
+          {
+            "key": "redacted",
+            "type": "Boolean",
+            "value": "false"
+          }
+        ],
+        "actions": [],
+        "context": [],
+        "tables": [],
+        "lists": [],
+        "variableMappings": [],
+        "variables": [],
+        "results": [],
+        "logs": [],
+        "datastoreReferences": []
+      }
+    ],
+    "variableMappings": [],
+    "outputMappings": [],
+    "metaData": [],
+    "created": "2026-03-12T12:04:31+00:00",
+    "createdBy": "3b476bf3-0f2b-43c0-b7f2-4b8c7c8b2612",
+    "updated": "2026-03-12T12:04:53.0340032Z",
+    "updatedBy": "3b476bf3-0f2b-43c0-b7f2-4b8c7c8b2612",
+    "activityServiceType": "Stateless",
+    "revisionId": "79663e79-0ffe-46d9-b450-bb88ff93cb3c",
+    "userId": "3b476bf3-0f2b-43c0-b7f2-4b8c7c8b2612",
+    "workspaceId": "2bbaecff-d8b0-4747-a91f-f2fd3aecde68",
+    "branch": "main",
+    "resourceId": "fda97a5c-4af4-4f4c-b330-709e43c2fa29",
+    "name": "new activitry"
+  }
+}
