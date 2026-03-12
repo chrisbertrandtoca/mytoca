@@ -1,0 +1,687 @@
+{
+  "metadata": {
+    "id": "ade565a4-f01f-4819-9b51-dd1dcfb8d099",
+    "contentHash": "Xjr3utc5ZQO9BwUfP3zN6zowY5zvwzF3fAZpxv5nV3E=",
+    "platformVersion": "10.0.0",
+    "revisionId": "963fa5f2-6ed8-4e1d-88e7-1aa258dd0b0c",
+    "updatedAt": "2026-03-12T12:17:00.3048229Z",
+    "updatedBy": "Toca.io",
+    "branch": "/app/data/git/08de2c26-4327-4f14-8977-0045ecb5b0d6/worktrees/dev"
+  },
+  "content": {
+    "id": "69a853c8985a489f0d7ddb8e",
+    "projectId": "460b6e3a-be5c-4a0c-880b-b1af48451b23",
+    "description": "Concat Table Test action",
+    "associatedUserId": "4eab5bd7-e0a8-483c-ae88-e13dd3dc92aa",
+    "botIds": [],
+    "version": 1,
+    "actions": [
+      {
+        "name": "Group - concatenation test",
+        "type": "Group",
+        "version": "1.1.0",
+        "actionId": "68640e36-ca1e-4a45-99be-7a0644518809",
+        "actionDefinitionActionId": "9db45d98-d1bd-4617-a3eb-525a681980b6",
+        "parameters": [
+          {
+            "key": "failOnError",
+            "type": "Boolean",
+            "value": "true"
+          }
+        ],
+        "actions": [
+          {
+            "name": "Set Variable - answerUidList",
+            "type": "VariableSetV2",
+            "version": "1.1.2",
+            "actionId": "81983dd4-1664-4b22-90fe-b00fc5bb1cb4",
+            "actionDefinitionActionId": "32b3480c-118e-42ce-99dd-1c25aa93d742",
+            "parameters": [
+              {
+                "key": "variable",
+                "type": "String",
+                "value": "\u0022answerUidList\u0022"
+              },
+              {
+                "key": "variableType",
+                "type": "String",
+                "value": "\u0022Array\u0022"
+              },
+              {
+                "key": "delimeter",
+                "type": "String",
+                "value": "\u0022,\u0022"
+              },
+              {
+                "key": "data",
+                "type": "String",
+                "value": "\u0022\u0022"
+              },
+              {
+                "key": "failOnError",
+                "type": "Boolean",
+                "value": "true"
+              },
+              {
+                "key": "redacted",
+                "type": "Boolean",
+                "value": "false"
+              }
+            ],
+            "actions": [],
+            "context": [],
+            "tables": [],
+            "lists": [],
+            "variableMappings": [
+              {
+                "actionId": "81983dd4-1664-4b22-90fe-b00fc5bb1cb4",
+                "actionResult": "81983dd4-1664-4b22-90fe-b00fc5bb1cb4:answerUidList",
+                "variableName": "answerUidList",
+                "type": "Array"
+              }
+            ],
+            "variables": [],
+            "results": [],
+            "logs": [],
+            "datastoreReferences": []
+          },
+          {
+            "name": "Add to List",
+            "type": "ArrayPush",
+            "version": "1.0.3",
+            "actionId": "973fee16-9e03-44ee-8177-6c73e4749b75",
+            "actionDefinitionActionId": "43efe5c0-6e0f-4b6b-a800-5e7ca99c0a09",
+            "parameters": [
+              {
+                "key": "array",
+                "type": "Array",
+                "value": "\u0022$$answerUidList$$\u0022"
+              },
+              {
+                "key": "value",
+                "type": "String",
+                "value": "\u0022abc6329e-a105-40ba-a8e5-00e69a74524a\u0022"
+              },
+              {
+                "key": "position",
+                "type": "String",
+                "value": "\u0022last\u0022"
+              },
+              {
+                "key": "failOnError",
+                "type": "Boolean",
+                "value": "true"
+              }
+            ],
+            "actions": [],
+            "context": [],
+            "tables": [],
+            "lists": [],
+            "variableMappings": [
+              {
+                "actionId": "973fee16-9e03-44ee-8177-6c73e4749b75",
+                "actionResult": "973fee16-9e03-44ee-8177-6c73e4749b75:updatedList",
+                "variableName": "answerUidList",
+                "type": "array"
+              }
+            ],
+            "variables": [],
+            "results": [],
+            "logs": [],
+            "datastoreReferences": []
+          },
+          {
+            "name": "Add to List",
+            "type": "ArrayPush",
+            "version": "1.0.3",
+            "actionId": "9cbf7aa6-15b4-483c-bc72-4ab7a61e4c82",
+            "actionDefinitionActionId": "43efe5c0-6e0f-4b6b-a800-5e7ca99c0a09",
+            "parameters": [
+              {
+                "key": "array",
+                "type": "Array",
+                "value": "\u0022$$answerUidList$$\u0022"
+              },
+              {
+                "key": "value",
+                "type": "String",
+                "value": "\u002217130120-48fe-488d-aaa6-00dc3fca7e42\u0022"
+              },
+              {
+                "key": "position",
+                "type": "String",
+                "value": "\u0022last\u0022"
+              },
+              {
+                "key": "failOnError",
+                "type": "Boolean",
+                "value": "true"
+              }
+            ],
+            "actions": [],
+            "context": [],
+            "tables": [],
+            "lists": [],
+            "variableMappings": [
+              {
+                "actionId": "9cbf7aa6-15b4-483c-bc72-4ab7a61e4c82",
+                "actionResult": "9cbf7aa6-15b4-483c-bc72-4ab7a61e4c82:updatedList",
+                "variableName": "answerUidList",
+                "type": "array"
+              }
+            ],
+            "variables": [],
+            "results": [],
+            "logs": [],
+            "datastoreReferences": []
+          },
+          {
+            "name": "Set Variable - userUid",
+            "type": "VariableSetV2",
+            "version": "1.1.2",
+            "actionId": "85f683e6-c32a-40bb-9580-f57a8a5536a7",
+            "actionDefinitionActionId": "32b3480c-118e-42ce-99dd-1c25aa93d742",
+            "parameters": [
+              {
+                "key": "variable",
+                "type": "String",
+                "value": "\u0022userUid\u0022"
+              },
+              {
+                "key": "variableType",
+                "type": "String",
+                "value": "\u0022String\u0022"
+              },
+              {
+                "key": "data",
+                "type": "String",
+                "value": "\u0022db1a5792-0d83-4b20-ab79-5d287d6f5ce8\u0022"
+              },
+              {
+                "key": "failOnError",
+                "type": "Boolean",
+                "value": "true"
+              },
+              {
+                "key": "redacted",
+                "type": "Boolean",
+                "value": "false"
+              }
+            ],
+            "actions": [],
+            "context": [],
+            "tables": [],
+            "lists": [],
+            "variableMappings": [
+              {
+                "actionId": "85f683e6-c32a-40bb-9580-f57a8a5536a7",
+                "actionResult": "85f683e6-c32a-40bb-9580-f57a8a5536a7:userUid",
+                "variableName": "userUid",
+                "type": "String"
+              }
+            ],
+            "variables": [],
+            "results": [],
+            "logs": [],
+            "datastoreReferences": []
+          },
+          {
+            "name": "Set Variable - assessmentUid",
+            "type": "VariableSetV2",
+            "version": "1.1.2",
+            "actionId": "93e111d6-838c-4ba4-b18a-089abba34d8c",
+            "actionDefinitionActionId": "32b3480c-118e-42ce-99dd-1c25aa93d742",
+            "parameters": [
+              {
+                "key": "variable",
+                "type": "String",
+                "value": "\u0022assessmentUid\u0022"
+              },
+              {
+                "key": "variableType",
+                "type": "String",
+                "value": "\u0022String\u0022"
+              },
+              {
+                "key": "data",
+                "type": "String",
+                "value": "\u002295360831-6c7f-4f74-8124-efa42ba26555\u0022"
+              },
+              {
+                "key": "failOnError",
+                "type": "Boolean",
+                "value": "true"
+              },
+              {
+                "key": "redacted",
+                "type": "Boolean",
+                "value": "false"
+              }
+            ],
+            "actions": [],
+            "context": [],
+            "tables": [],
+            "lists": [],
+            "variableMappings": [
+              {
+                "actionId": "93e111d6-838c-4ba4-b18a-089abba34d8c",
+                "actionResult": "93e111d6-838c-4ba4-b18a-089abba34d8c:assessmentUid",
+                "variableName": "assessmentUid",
+                "type": "String"
+              }
+            ],
+            "variables": [],
+            "results": [],
+            "logs": [],
+            "datastoreReferences": []
+          },
+          {
+            "name": "Set Variable - comment",
+            "type": "VariableSetV2",
+            "version": "1.1.2",
+            "actionId": "a106bafe-7513-46bc-8dac-03292f7b226c",
+            "actionDefinitionActionId": "32b3480c-118e-42ce-99dd-1c25aa93d742",
+            "parameters": [
+              {
+                "key": "variable",
+                "type": "String",
+                "value": "\u0022comment\u0022"
+              },
+              {
+                "key": "variableType",
+                "type": "String",
+                "value": "\u0022String\u0022"
+              },
+              {
+                "key": "data",
+                "type": "String",
+                "value": "\u0022tested with concatenation without bulk guid entry\u0022"
+              },
+              {
+                "key": "failOnError",
+                "type": "Boolean",
+                "value": "true"
+              },
+              {
+                "key": "redacted",
+                "type": "Boolean",
+                "value": "false"
+              }
+            ],
+            "actions": [],
+            "context": [],
+            "tables": [],
+            "lists": [],
+            "variableMappings": [
+              {
+                "actionId": "a106bafe-7513-46bc-8dac-03292f7b226c",
+                "actionResult": "a106bafe-7513-46bc-8dac-03292f7b226c:comment",
+                "variableName": "comment",
+                "type": "String"
+              }
+            ],
+            "variables": [],
+            "results": [],
+            "logs": [],
+            "datastoreReferences": []
+          },
+          {
+            "name": "Set Variable - commentsTable",
+            "type": "VariableSetV2",
+            "version": "1.1.2",
+            "actionId": "36a1604d-9598-41be-b0a7-e47d149b1b24",
+            "actionDefinitionActionId": "32b3480c-118e-42ce-99dd-1c25aa93d742",
+            "parameters": [
+              {
+                "key": "variable",
+                "type": "String",
+                "value": "\u0022commentsTable\u0022"
+              },
+              {
+                "key": "variableType",
+                "type": "String",
+                "value": "\u0022TableV3\u0022"
+              },
+              {
+                "key": "data",
+                "type": "TableV3",
+                "value": "{\u0022values\u0022:[],\u0022model\u0022:{\u0022id\u0022:{\u0022name\u0022:\u0022id\u0022,\u0022label\u0022:\u0022id\u0022,\u0022type\u0022:\u0022uuid\u0022,\u0022defaultValue\u0022:null,\u0022isPrimaryKey\u0022:true},\u0022created\u0022:{\u0022name\u0022:\u0022created\u0022,\u0022label\u0022:\u0022Created\u0022,\u0022type\u0022:\u0022datetime\u0022,\u0022defaultValue\u0022:null,\u0022metaData\u0022:{\u0022autoGenerate\u0022:true}},\u0022updated\u0022:{\u0022name\u0022:\u0022updated\u0022,\u0022label\u0022:\u0022Updated\u0022,\u0022type\u0022:\u0022datetime\u0022,\u0022defaultValue\u0022:null,\u0022metaData\u0022:{\u0022autoGenerate\u0022:true,\u0022autoUpdate\u0022:true}},\u0022comment\u0022:{\u0022name\u0022:\u0022comment\u0022,\u0022label\u0022:\u0022comment\u0022,\u0022type\u0022:\u0022string\u0022,\u0022defaultValue\u0022:\u0022\u0022},\u0022user\u0022:{\u0022name\u0022:\u0022user\u0022,\u0022label\u0022:\u0022user\u0022,\u0022type\u0022:\u0022string\u0022,\u0022defaultValue\u0022:\u0022\u0022},\u0022answers\u0022:{\u0022name\u0022:\u0022answers\u0022,\u0022label\u0022:\u0022answers\u0022,\u0022type\u0022:\u0022string\u0022,\u0022defaultValue\u0022:\u0022\u0022}}}"
+              },
+              {
+                "key": "failOnError",
+                "type": "Boolean",
+                "value": "true"
+              },
+              {
+                "key": "redacted",
+                "type": "Boolean",
+                "value": "false"
+              }
+            ],
+            "actions": [],
+            "context": [],
+            "tables": [],
+            "lists": [],
+            "variableMappings": [
+              {
+                "actionId": "36a1604d-9598-41be-b0a7-e47d149b1b24",
+                "actionResult": "36a1604d-9598-41be-b0a7-e47d149b1b24:commentsTable",
+                "variableName": "commentsTable",
+                "type": "TableV3"
+              }
+            ],
+            "variables": [],
+            "results": [],
+            "logs": [],
+            "datastoreReferences": []
+          },
+          {
+            "name": "Python - create comments table for concatenation to datastore table",
+            "type": "ExecutePythonScript",
+            "version": "1.0.6",
+            "actionId": "47ad8a54-0de0-4026-9849-109321f72ce4",
+            "actionDefinitionActionId": "269d731f-0848-4d97-adb7-c64ac01cad48",
+            "parameters": [
+              {
+                "key": "command-chip",
+                "type": "Boolean",
+                "value": "false"
+              },
+              {
+                "key": "inputParams",
+                "type": "Array",
+                "value": "[{\u0022key\u0022:\u0022answerUidList\u0022,\u0022type\u0022:\u0022Array\u0022,\u0022value\u0022:\u0022$$answerUidList$$\u0022},{\u0022key\u0022:\u0022commentsTable\u0022,\u0022type\u0022:\u0022TableV3\u0022,\u0022value\u0022:\u0022$$commentsTable$$\u0022},{\u0022key\u0022:\u0022userUid\u0022,\u0022type\u0022:\u0022String\u0022,\u0022value\u0022:\u0022$$userUid$$\u0022},{\u0022key\u0022:\u0022comment\u0022,\u0022type\u0022:\u0022String\u0022,\u0022value\u0022:\u0022$$comment$$\u0022}]"
+              },
+              {
+                "key": "command",
+                "type": "String",
+                "value": "\u0022import json\\r\\nfrom datetime import datetime, timezone\\r\\nimport uuid\\r\\n\\r\\ndef return_current_datetime():\\r\\n    # Get the current UTC datetime\\r\\n    current_time = datetime.now(timezone.utc)\\r\\n\\r\\n    # Format it as the desired string\\r\\n    formatted_time = current_time.strftime(\\\u0022%Y-%m-%dT%H:%M:%SZ\\\u0022)\\r\\n\\r\\n    return formatted_time\\r\\n\\r\\ndef generate_uuid():\\r\\n    # Generate a UUID\\r\\n    generated_uuid = str(uuid.uuid4())\\r\\n\\r\\n    return generated_uuid\\r\\n    \\r\\nanswerUids = context[\u0027answerUidList\u0027]\\r\\n\\r\\ncommentsTableJSON = json.loads(context[\u0027commentsTable\u0027])\\r\\ncommentsTableModelJSON = commentsTableJSON[\u0027model\u0027]\\r\\ncommentsValuesJSONArray = list()\\r\\n\\r\\nif len(answerUids) \u003E 0:\\r\\n    for answer in answerUids:\\r\\n        recordValue = {}\\r\\n        recordValue[\u0027id\u0027] = generate_uuid()\\r\\n        recordValue[\u0027created\u0027] = return_current_datetime()\\r\\n        recordValue[\u0027updated\u0027] = return_current_datetime()\\r\\n        recordValue[\u0027comment\u0027] = context[\u0027comment\u0027]\\r\\n        recordValue[\u0027user\u0027] = context[\u0027userUid\u0027]\\r\\n        recordValue[\u0027answers\u0027] = answer\\r\\n        recordJSON = {}\\r\\n        recordJSON[\u0027recordValue\u0027] = recordValue\\r\\n                    \\r\\n        #Add recordValue to commentsValuesJSONArray\\r\\n        commentsValuesJSONArray.append(recordJSON)\\r\\n    \\r\\ncommentsTableJSON[\u0027values\u0027] = commentsValuesJSONArray\\r\\ncontext[\u0027commentsTable\u0027] = json.dumps(commentsTableJSON)\u0022"
+              },
+              {
+                "key": "tempContext",
+                "type": "Boolean",
+                "value": "false"
+              },
+              {
+                "key": "timeout",
+                "type": "Number",
+                "value": "30000"
+              },
+              {
+                "key": "errorOnTimeout",
+                "type": "Boolean",
+                "value": "false"
+              },
+              {
+                "key": "failOnError",
+                "type": "Boolean",
+                "value": "true"
+              }
+            ],
+            "actions": [],
+            "context": [],
+            "tables": [],
+            "lists": [],
+            "variableMappings": [],
+            "variables": [],
+            "results": [],
+            "logs": [],
+            "datastoreReferences": []
+          },
+          {
+            "name": "Concatenate Tables",
+            "type": "TableConcatenate",
+            "version": "3.0.4",
+            "actionId": "f2e384c1-ff91-4979-b601-57e5886de3f5",
+            "actionDefinitionActionId": "2c434b95-a831-4c4b-b385-f61358d68146",
+            "parameters": [
+              {
+                "key": "fromTable",
+                "type": "TableV3",
+                "value": "\u0022$$commentsTable$$\u0022"
+              },
+              {
+                "key": "toTable",
+                "type": "TableV3",
+                "value": "\u0022\u00A3\u00A3!402aef30-4f8a-4b65-94c5-635f39ec556e:comments\u00A3\u00A3\u0022"
+              },
+              {
+                "key": "timeout",
+                "type": "Number",
+                "value": "30000"
+              },
+              {
+                "key": "errorOnTimeout",
+                "type": "Boolean",
+                "value": "true"
+              },
+              {
+                "key": "failOnError",
+                "type": "Boolean",
+                "value": "true"
+              },
+              {
+                "key": "redacted",
+                "type": "Boolean",
+                "value": "false"
+              }
+            ],
+            "actions": [],
+            "context": [],
+            "tables": [],
+            "lists": [],
+            "variableMappings": [],
+            "variables": [],
+            "results": [],
+            "logs": [],
+            "datastoreReferences": [
+              {
+                "datastoreId": "402aef30-4f8a-4b65-94c5-635f39ec556e",
+                "variableName": "comments"
+              }
+            ]
+          },
+          {
+            "name": "Set Variable - answerUid",
+            "type": "VariableSetV2",
+            "version": "1.1.2",
+            "actionId": "62d77030-1909-4e2f-a4e0-8c94062ca3f2",
+            "actionDefinitionActionId": "32b3480c-118e-42ce-99dd-1c25aa93d742",
+            "disabled": true,
+            "parameters": [
+              {
+                "key": "variable",
+                "type": "String",
+                "value": "\u0022answerUid\u0022"
+              },
+              {
+                "key": "variableType",
+                "type": "String",
+                "value": "\u0022String\u0022"
+              },
+              {
+                "key": "data",
+                "type": "String",
+                "value": "\u0022abc6329e-a105-40ba-a8e5-00e69a74524a\u0022"
+              },
+              {
+                "key": "failOnError",
+                "type": "Boolean",
+                "value": "true"
+              },
+              {
+                "key": "redacted",
+                "type": "Boolean",
+                "value": "false"
+              }
+            ],
+            "actions": [],
+            "context": [],
+            "tables": [],
+            "lists": [],
+            "variableMappings": [
+              {
+                "actionId": "62d77030-1909-4e2f-a4e0-8c94062ca3f2",
+                "actionResult": "62d77030-1909-4e2f-a4e0-8c94062ca3f2:answerUid",
+                "variableName": "answerUid",
+                "type": "String"
+              }
+            ],
+            "variables": [],
+            "results": [],
+            "logs": [],
+            "datastoreReferences": []
+          },
+          {
+            "name": "Add Row to Table",
+            "type": "AddRowToTable",
+            "version": "3.0.4",
+            "actionId": "b9239cd2-2460-43e0-ad7c-c1a5d9c93f53",
+            "actionDefinitionActionId": "48288a39-6dbe-4f90-a9c5-1f3d06416348",
+            "disabled": true,
+            "parameters": [
+              {
+                "key": "table",
+                "type": "TableV3",
+                "value": "\u0022$$commentsTable$$\u0022"
+              },
+              {
+                "key": "record",
+                "type": "Record",
+                "value": "{\u0022comment\u0022:\u0022Status change for testing\u0022,\u0022user\u0022:\u0022$$userUid$$\u0022,\u0022bulk_update_guid\u0022:\u0022$$bukUpdateGuid$$\u0022,\u0022answers\u0022:\u0022$$answerUid$$\u0022}"
+              },
+              {
+                "key": "multiplePerms",
+                "type": "String",
+                "value": "\u0022single\u0022"
+              },
+              {
+                "key": "userId",
+                "type": "String",
+                "value": "\u0022\u0022"
+              },
+              {
+                "key": "permission",
+                "type": "String",
+                "value": "\u0022\u0022"
+              },
+              {
+                "key": "timeout",
+                "type": "Number",
+                "value": "30000"
+              },
+              {
+                "key": "errorOnTimeout",
+                "type": "Boolean",
+                "value": "true"
+              },
+              {
+                "key": "failOnError",
+                "type": "Boolean",
+                "value": "true"
+              },
+              {
+                "key": "redacted",
+                "type": "Boolean",
+                "value": "false"
+              }
+            ],
+            "actions": [],
+            "context": [],
+            "tables": [],
+            "lists": [],
+            "variableMappings": [
+              {
+                "actionId": "b9239cd2-2460-43e0-ad7c-c1a5d9c93f53",
+                "actionResult": "b9239cd2-2460-43e0-ad7c-c1a5d9c93f53:table",
+                "variableName": "commentsTable",
+                "type": "TableV3"
+              }
+            ],
+            "variables": [],
+            "results": [],
+            "logs": [],
+            "datastoreReferences": []
+          }
+        ],
+        "context": [],
+        "tables": [],
+        "lists": [],
+        "variableMappings": [],
+        "variables": [],
+        "results": [],
+        "logs": [],
+        "datastoreReferences": []
+      }
+    ],
+    "variableMappings": [
+      {
+        "actionId": "81983dd4-1664-4b22-90fe-b00fc5bb1cb4",
+        "actionResult": "81983dd4-1664-4b22-90fe-b00fc5bb1cb4:answerUidList",
+        "variableName": "answerUidList",
+        "type": "Array"
+      },
+      {
+        "actionId": "973fee16-9e03-44ee-8177-6c73e4749b75",
+        "actionResult": "973fee16-9e03-44ee-8177-6c73e4749b75:updatedList",
+        "variableName": "answerUidList",
+        "type": "array"
+      },
+      {
+        "actionId": "9cbf7aa6-15b4-483c-bc72-4ab7a61e4c82",
+        "actionResult": "9cbf7aa6-15b4-483c-bc72-4ab7a61e4c82:updatedList",
+        "variableName": "answerUidList",
+        "type": "array"
+      },
+      {
+        "actionId": "85f683e6-c32a-40bb-9580-f57a8a5536a7",
+        "actionResult": "85f683e6-c32a-40bb-9580-f57a8a5536a7:userUid",
+        "variableName": "userUid",
+        "type": "String"
+      },
+      {
+        "actionId": "93e111d6-838c-4ba4-b18a-089abba34d8c",
+        "actionResult": "93e111d6-838c-4ba4-b18a-089abba34d8c:assessmentUid",
+        "variableName": "assessmentUid",
+        "type": "String"
+      },
+      {
+        "actionId": "a106bafe-7513-46bc-8dac-03292f7b226c",
+        "actionResult": "a106bafe-7513-46bc-8dac-03292f7b226c:comment",
+        "variableName": "comment",
+        "type": "String"
+      },
+      {
+        "actionId": "36a1604d-9598-41be-b0a7-e47d149b1b24",
+        "actionResult": "36a1604d-9598-41be-b0a7-e47d149b1b24:commentsTable",
+        "variableName": "commentsTable",
+        "type": "TableV3"
+      },
+      {
+        "actionId": "62d77030-1909-4e2f-a4e0-8c94062ca3f2",
+        "actionResult": "62d77030-1909-4e2f-a4e0-8c94062ca3f2:answerUid",
+        "variableName": "answerUid",
+        "type": "String"
+      },
+      {
+        "actionId": "b9239cd2-2460-43e0-ad7c-c1a5d9c93f53",
+        "actionResult": "b9239cd2-2460-43e0-ad7c-c1a5d9c93f53:table",
+        "variableName": "commentsTable",
+        "type": "TableV3"
+      }
+    ],
+    "outputMappings": [],
+    "metaData": [],
+    "created": "2025-05-27T14:27:02+00:00",
+    "createdBy": "99ae93c4-0c31-42f4-8159-378d56233a56",
+    "updated": "2026-03-12T12:17:00.1336606Z",
+    "updatedBy": "3b476bf3-0f2b-43c0-b7f2-4b8c7c8b2612",
+    "activityServiceType": "Stateless",
+    "revisionId": "963fa5f2-6ed8-4e1d-88e7-1aa258dd0b0c",
+    "userId": "3b476bf3-0f2b-43c0-b7f2-4b8c7c8b2612",
+    "workspaceId": "08de2c26-4327-4f14-8977-0045ecb5b0d6",
+    "branch": "dev",
+    "resourceId": "ade565a4-f01f-4819-9b51-dd1dcfb8d099",
+    "name": "Concat Table"
+  }
+}

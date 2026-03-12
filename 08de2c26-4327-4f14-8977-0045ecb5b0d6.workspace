@@ -1,0 +1,28 @@
+{
+  "metadata": {
+    "id": "08de2c26-4327-4f14-8977-0045ecb5b0d6",
+    "contentHash": "PAuKl38NWA\u002BzvDVQZFcrGWs3oS4Twvn/a/mPRuSjMvY=",
+    "platformVersion": "10.0.0",
+    "revisionId": "64acabfa-7602-433d-965b-040d4b1f078e",
+    "updatedAt": "2026-03-12T12:18:16.6390344Z",
+    "updatedBy": "Toca.io",
+    "branch": "/app/data/git/08de2c26-4327-4f14-8977-0045ecb5b0d6/worktrees/dev"
+  },
+  "content": {
+    "id": "08de2c26-4327-4f14-8977-0045ecb5b0d6",
+    "accent": "#0b184c",
+    "route": "achillesss",
+    "description": "the dev branch",
+    "createdBy": "2fb470fe-4828-45e3-93b9-94e11dc9736b",
+    "created": "2025-11-25T13:26:38.025944",
+    "updatedBy": "3b476bf3-0f2b-43c0-b7f2-4b8c7c8b2612",
+    "updated": "2026-03-12T12:18:16.3475373Z",
+    "repositoryUrl": "https://github.com/chrisbertrandtoca/mytoca.git",
+    "revisionId": "64acabfa-7602-433d-965b-040d4b1f078e",
+    "userId": "3b476bf3-0f2b-43c0-b7f2-4b8c7c8b2612",
+    "workspaceId": "08de2c26-4327-4f14-8977-0045ecb5b0d6",
+    "branch": "dev",
+    "resourceId": "08de2c26-4327-4f14-8977-0045ecb5b0d6",
+    "name": "Achilles"
+  }
+}
